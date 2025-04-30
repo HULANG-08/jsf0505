@@ -1,0 +1,196 @@
+body {
+  background: url('1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+#container {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 40px 30px 30px 30px;
+  text-align: center;
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+  z-index: 2;
+}
+h1, h2, h3 {
+  margin: 0 0 20px 0;
+  color: #ff7e5f;
+}
+.question {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  color: #333;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.option-btn {
+  background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  color: #ff7e5f;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255,126,95,0.1);
+}
+.option-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(255,126,95,0.2);
+}
+.start-btn {
+  background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(253,160,133,0.15);
+}
+.start-btn:hover {
+  background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+  transform: scale(1.04);
+}
+.blessing {
+  font-size: 5em;
+  color: #ff7e5f;
+  margin-top: 30px;
+  animation: popIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+  font-weight: bold;
+  text-shadow: 0 2px 8px #fcb69f77;
+  position: relative;
+  z-index: 20;
+}
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+/* 彩带特效 */
+.confetti {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+}
+.confetti-piece {
+  position: absolute;
+  width: 12px; height: 24px;
+  border-radius: 4px;
+  opacity: 0.8;
+  animation: confetti-fall 2.5s linear forwards;
+}
+@keyframes confetti-fall {
+  0% { transform: translateY(-40px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+.home-options {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.continue-btn, .not-continue-btn {
+  background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(253,160,133,0.15);
+}
+.continue-btn:hover, .not-continue-btn:hover {
+  background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+  transform: scale(1.04);
+}
+.not-continue-btn {
+  opacity: 0.7;
+}
+.disabled-btn {
+  background: #eee;
+  color: #aaa;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  cursor: not-allowed;
+  box-shadow: 0 2px 8px #eee;
+}
+.literature-options .option-btn {
+  width: 260px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+  text-align: center;
+  font-size: 1.1em;
+  margin: 0;
+}
+.photo-options img {
+  width: 100%;
+  max-width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ccc;
+}
+.photo-options {
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+.finish-options {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.finish-yes-btn, .finish-no-btn {
+  background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(253,160,133,0.15);
+}
+.finish-yes-btn:hover, .finish-no-btn:hover {
+  background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+  transform: scale(1.04);
+}
+.finish-no-btn {
+  opacity: 0.7;
+} 

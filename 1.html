@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>尊敬的季诗凡女士，您的专属问答游戏即将开启，请问您是否继续？</h1>
+    <div class="home-options">
+      <button class="continue-btn" id="continueBtn">继续</button>
+      <button class="not-continue-btn" id="notContinueBtn">不继续</button>
+    </div>
+  </div>
+  <canvas class="confetti" id="confettiCanvas"></canvas>
+  <audio id="bgm" src="bgm.mp3" loop autoplay muted></audio>
+  <audio id="clickSound" src="click.mp3" muted></audio>
+  <div id="volumeControl" style="position:fixed;top:18px;left:18px;z-index:20;cursor:pointer;background:rgba(255,255,255,0.85);border-radius:50%;box-shadow:0 2px 8px #eee;width:44px;height:44px;display:flex;align-items:center;justify-content:center;">
+    <svg id="volumeIcon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff7e5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19 12c0-2.21-1.79-4-4-4"></path>
+      <path d="M19 12c0 2.21-1.79 4-4 4"></path>
+    </svg>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html> 
